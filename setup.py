@@ -1,7 +1,7 @@
 from os import path
 from setuptools import setup, find_packages
 import sys
-
+import os
 
 # NOTE: This file must remain Python 2 compatible for the foreseeable future,
 # to ensure that we error out properly for people with outdated setuptools
@@ -26,14 +26,13 @@ here = path.abspath(path.dirname(__file__))
 with open(path.join(here, 'README.rst'), encoding='utf-8') as readme_file:
     readme = readme_file.read()
 
-with open(path.join(here, 'requirements.txt')) as requirements_file:
-    # Parse requirements.txt, ignoring any commented-out lines.
-    requirements = [line for line in requirements_file.read().splitlines()
-                    if not line.startswith('#')]
-
+# with open(path.join(here, 'requirements.txt')) as requirements_file:
+#     # Parse requirements.txt, ignoring any commented-out lines.
+#     requirements = [line for line in requirements_file.read().splitlines()
+#                     if not line.startswith('#')]
 
 setup(
-    name='montecarlo',
+    name='montecarlo-tsc-24',
     version="1.0", #v""ersioneer.get_version(),
     # cmdclass=versioneer.get_cmdclass(),
     description="Python package for doing science.",
@@ -55,7 +54,10 @@ setup(
             # 'path/to/data_file',
         ]
     },
-    install_requires=requirements,
+    install_requires=[
+        'numpy',
+        'matplotlib',
+    ],
     license="BSD (3-clause)",
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
