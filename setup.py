@@ -1,7 +1,6 @@
 from os import path
 from setuptools import setup, find_packages
 import sys
-import versioneer
 
 
 # NOTE: This file must remain Python 2 compatible for the foreseeable future,
@@ -35,8 +34,8 @@ with open(path.join(here, 'requirements.txt')) as requirements_file:
 
 setup(
     name='montecarlo',
-    version=versioneer.get_version(),
-    cmdclass=versioneer.get_cmdclass(),
+    version="1.0", #v""ersioneer.get_version(),
+    # cmdclass=versioneer.get_cmdclass(),
     description="Python package for doing science.",
     long_description=readme,
     author="fran",
