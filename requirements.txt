@@ -3,4 +3,4 @@ numpy
 matplotlib
 sphinx
 sphinx-rtd-theme
-IPhython
+ipython
